@@ -19,3 +19,11 @@ quantitatively reason with them.
 Add your answer to this markdown file. [This
 page](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 might help with the notation for mathematical expressions.
+
+1. The probability that only choose the first element to be a good pivot is $P_{first}=\frac{(\frac{3n}{4})-(\frac{n}{4})}{n}=\frac{1}{2}=50$%
+
+2. In the Median-of-three method, there are 3 elements, and each element will have equal chance to be median, so the probability density is $f_m(p)=6p(1-p)$, calculate the probability $P=\int_{1/4}^{3/4}6p(1-p)dp=68.75$%
+
+   Explian for the probability density function $f_m(p)=6p(1-p)$: suppose there are elements $x_1$, $x_2$, $x_3$, and each of them have the equal chance to be the median, for example, if select $x_2$ to be the median, there are two conditions: $x_1<x_2<x_3$ and $x_3<x_2<x_1$, for the first condition supose the probability that $x_1<x_2$ is $p$, then $x_2<x_3$ is $(1-p)$, and combine them together, the probability for $x_1<x_2<x_3$ is $p(1-p)$. As for the another condition $x_3<x_2<x_1$, the probability is the same as the last one, which is $p(1-p)$. since there are 3 $x$, and each of them could have 2 conditions, so the probability density is $3\times2\times(1-p)=6p(1-p)$
+
+Therefore, use the Median-of-three method is more likely to pick a good pivot compared to simply choose the first element to be a good pivot, becuase the probability of the Median-of-three method is 68.75%, which is greater than simply choose the first element (50%).
